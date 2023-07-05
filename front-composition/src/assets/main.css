@@ -8,6 +8,10 @@
   font-weight: normal;
 }
 
+#app * {
+  transition: all .3s;
+}
+
 a,
 .green {
   text-decoration: none;
@@ -21,15 +25,35 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+fieldset {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+legend {
+  font-weight: bold;
+}
+
+input, select {
+  padding: 0.5em 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 1em;
+  margin-bottom: .5em;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-bottom: 2px solid var(--green-400);
+}
+
+button, input[type="selected"] {
+  background-color: var(--green-400);
+  color: var(--gray-800);
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.4s;
 }

@@ -11,7 +11,6 @@ CREATE TABLE `items` (
     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(255) NOT NULL,
     `description` VARCHAR(255) NOT NULL,
-    `lost_date`VARCHAR(255) NOT NULL,
     `category_id` INT NOT NULL,
-    FOREIGN KEY(`category_id`) REFERENCES `categories`(`id`)
+    FOREIGN KEY(`category_id`) REFERENCES `categories`(`id`) ON DELETE CASCADE
 );
